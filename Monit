@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies accept</title>
+</head>
+
+<body onload="checkCookie()">
+    <div id="ciastko">
+        Polityka prywatnosci. Akceptujesz czy grypsujesz? Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        <br />
+        <button onclick="makeCookie()">Akcpetuję</button>
+    </div>
+    <script>
+        function makeCookie() {
+            document.cookie = "cookieAccept: true;"
+                document.getElementById("ciastko").style.display = "none";
+        }
+
+        function checkCookie() {
+            if (document.cookie == "cookieAccept: true;") {
+                document.getElementById("ciastko").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
